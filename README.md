@@ -99,16 +99,16 @@ Tú recuerdas tus lecciones sobre cómo en la Red (o la HoloRed) se gestionan la
 **Pregunta:** Explica el funcionamiento básico del sistema DNS y su importancia en la comunicación en redes. ¿Cómo realiza la red rebelde (o cualquier red TCP/IP) la resolución de nombres de dominio a direcciones IP? Incluye en tu explicación qué es un servidor DNS y un registro (por ejemplo, un registro A), ilustrando con un ejemplo simple (por ejemplo: traducir holonet.rebelion.org a una dirección IP)​
 
 Además, menciona brevemente qué sucede si el servidor DNS no está disponible y cómo eso afectaría a las comunicaciones de la Alianza.
-## 🔍 ¿Qué es el DNS y por qué es importante?
+##  ¿Qué es el DNS y por qué es importante?
 El **Sistema de Nombres de Dominio (DNS)** traduce nombres de dominio legibles por humanos en direcciones IP comprensibles por las máquinas. Sin DNS, tendríamos que recordar largas secuencias numéricas en lugar de nombres intuitivos como `holonet.rebelion.org`.
 
-## 🛠️ ¿Cómo funciona la resolución de nombres?
+## ¿Cómo funciona la resolución de nombres?
 Cuando un dispositivo intenta acceder a un dominio, sigue estos pasos:
 1. **Consulta al servidor DNS local**: El dispositivo pregunta a su servidor DNS si conoce la dirección IP del dominio.
 2. **Búsqueda en caché**: Si el servidor DNS ya tiene la dirección almacenada, la devuelve inmediatamente.
 3. **Consulta a servidores superiores**: Si no tiene la respuesta, pregunta a los servidores raíz, que dirigen la consulta a los servidores de dominio adecuados.
 4. **Respuesta final**: Una vez encontrada la dirección IP, el servidor DNS la envía al dispositivo, permitiendo la conexión.
 
-## 🔗 Elementos clave del DNS
+## Elementos clave del DNS
 - **Servidor DNS**: Un sistema que almacena y gestiona la traducción de nombres de dominio a direcciones IP.
 - **Registro A**: Un tipo de registro DNS que asocia un nombre de dominio con una dirección IPv4. Ejemplo:
