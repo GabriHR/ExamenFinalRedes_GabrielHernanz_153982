@@ -2,11 +2,9 @@
 
 **Autor**: Gabriel Hernanz  
 **Examen Final de Redes II – Cisco Packet Tracer**
-
----
-
 Link con acceso al respositorio --> https://github.com/GabriHR/ExamenFinalRedes_GabrielHernanz_153982.git
 
+---
 # Parte I - Misiones de Conocimiento Teórico
 
 ## 🛰️ Misión 1: Reconexión en la Base Eco (Hoth) – Direccionamiento IP y Subredes
