@@ -158,7 +158,7 @@ UDP no establece conexión previa ni verifica la entrega de paquetes. Es ideal p
 - **UDP**: Para transmisiones en tiempo real donde la velocidad es clave (**comunicaciones de combate**, **streaming de sensores**).
 
 ###  Conclusión
-**TCP es como Yoda: sabio, preciso y confiable**, mientras que **UDP es como el Halcón Milenario: veloz, pero con riesgos**. ¡Que la Fuerza de los protocolos te guíe en cada misión! 🚀🔥
+**TCP es como Yoda: sabio, preciso y confiable**, mientras que **UDP es como el Halcón Milenario: veloz, pero con riesgos**. ¡Que la Fuerza de los protocolos te guíe en cada misión! 
 
 ---
 # 🔐 Misión 5: Comunicación Segura o Lado Oscuro – Criptografía y Seguridad de la Red
@@ -181,7 +181,7 @@ Por ejemplo, si Leia y Luke comparten una frase clave secreta para cifrar sus ho
 | Tipo de Cifrado | Funcionamiento | Ventajas | Inconvenientes |
 |----------------|---------------|----------|---------------|
 | **Simétrico** | Usa una única clave secreta compartida para cifrar y descifrar datos. | - Rápido y eficiente.<br>- Menos consumo de recursos.<br>- Ideal para grandes volúmenes de datos. | - La clave debe compartirse de forma segura.<br>- Si la clave es comprometida, toda la comunicación queda expuesta. |
-| **Asimétrico** | Usa un par de claves: una pública para cifrar y una privada para descifrar. | - No requiere compartir una clave secreta.<br>- Permite autenticación y no repudio.<br>- Más seguro para comunicaciones abiertas. | - Más lento que el cifrado simétrico.<br>- Mayor consumo de recursos.<br>- No ideal para grandes volúmenes de datos. |
+| **Asimétrico** | Usa un par de claves: una pública para cifrar y una privada para descifrar. | - No requiere compartir una clave secreta.<br>- Permite autenticación y no repudio.<br>- Más seguro para comunicaciones abiertas. | - Más lento que el cifrado simétrico.<br>- Mayor consumo de recursos.<br>- No ideal para grandes volúmenes de datos.
 
 ###  Ejemplos Galácticos
 - **Cifrado Simétrico:** Si **Leia y Luke** comparten una frase clave secreta para cifrar sus holomensajes, están usando **cifrado simétrico**.
@@ -198,4 +198,4 @@ El uso de protocolos seguros es crucial para la administración remota de los eq
 - **Telnet (inseguro)**: Transmite datos en texto plano, permitiendo que sean interceptados por el Imperio.
 
 ### Conclusión
-La criptografía es esencial para proteger las comunicaciones de la Alianza Rebelde. **El cifrado simétrico es rápido y eficiente**, mientras que **el cifrado asimétrico es más seguro para intercambios abiertos**. Además, la autenticación y el uso de protocolos seguros como **SSH** garantizan que los mensajes no sean interceptados ni alterados. ¡Que la Fuerza de la seguridad te acompañe! 🔥🚀
+La criptografía es esencial para proteger las comunicaciones de la Alianza Rebelde. **El cifrado simétrico es rápido y eficiente**, mientras que **el cifrado asimétrico es más seguro para intercambios abiertos**. Además, la autenticación y el uso de protocolos seguros como **SSH** garantizan que los mensajes no sean interceptados ni alterados. ¡Que la Fuerza de la seguridad te acompañe! 
