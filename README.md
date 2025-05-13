@@ -2,9 +2,9 @@
 
 Link con acceso al respositorio --> https://github.com/GabriHR/ExamenFinalRedes_GabrielHernanz_153982.git
 
-## Parte I - Misiones de Conocimiento Teórico
+# Parte I - Misiones de Conocimiento Teórico
 
-# 🛰️ Misión 1: Reconexión en la Base Eco (Hoth) – Direccionamiento IP y Subredes
+## 🛰️ Misión 1: Reconexión en la Base Eco (Hoth) – Direccionamiento IP y Subredes
 
 ## 📖 Situación
 La Base Eco en Hoth ha quedado incomunicada tras un bombardeo imperial. La General Leia Organa te encomienda diseñar un nuevo esquema de red para restablecer la comunicación interna y con la flota rebelde. Hoth alberga varios departamentos (mando, defensa, médico, hangar) y cada uno necesita su propia subred IP debido a requisitos de seguridad y cantidad de dispositivos. Además, es crucial optimizar el uso del bloque de direcciones disponibles.
