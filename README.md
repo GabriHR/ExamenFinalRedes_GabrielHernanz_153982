@@ -37,7 +37,7 @@ Partimos de la red **172.16.0.0/24** y la dividimos en subredes adecuadas para c
 | **Hangar y Taller** | `172.16.0.128/28`   | `255.255.255.240`       | `172.16.0.129 - 172.16.0.142` | 14          |
 | **Enlace Troncal**  | `172.16.0.144/28`   | `255.255.255.240`       | `172.16.0.145 - 172.16.0.158` | 14          |
 
-## Conclusión
+### Conclusión
 Cada departamento de la Base Eco cuenta ahora con una subred optimizada, maximizando el uso del espacio disponible y asegurando la comunicación interna y con la antena de comunicaciones. ¡Misión cumplida, padawan! Que la Fuerza del subnetting te acompañe. 
 
 ---
@@ -99,17 +99,17 @@ Tú recuerdas tus lecciones sobre cómo en la Red (o la HoloRed) se gestionan la
 **Pregunta:** Explica el funcionamiento básico del sistema DNS y su importancia en la comunicación en redes. ¿Cómo realiza la red rebelde (o cualquier red TCP/IP) la resolución de nombres de dominio a direcciones IP? Incluye en tu explicación qué es un servidor DNS y un registro (por ejemplo, un registro A), ilustrando con un ejemplo simple (por ejemplo: traducir holonet.rebelion.org a una dirección IP)​
 
 Además, menciona brevemente qué sucede si el servidor DNS no está disponible y cómo eso afectaría a las comunicaciones de la Alianza.
-##  ¿Qué es el DNS y por qué es importante?
+###  ¿Qué es el DNS y por qué es importante?
 El **Sistema de Nombres de Dominio (DNS)** traduce nombres de dominio legibles por humanos en direcciones IP comprensibles por las máquinas. Sin DNS, tendríamos que recordar largas secuencias numéricas en lugar de nombres intuitivos como `holonet.rebelion.org`.
 
-## ¿Cómo funciona la resolución de nombres?
+### ¿Cómo funciona la resolución de nombres?
 Cuando un dispositivo intenta acceder a un dominio, sigue estos pasos:
 1. **Consulta al servidor DNS local**: El dispositivo pregunta a su servidor DNS si conoce la dirección IP del dominio.
 2. **Búsqueda en caché**: Si el servidor DNS ya tiene la dirección almacenada, la devuelve inmediatamente.
 3. **Consulta a servidores superiores**: Si no tiene la respuesta, pregunta a los servidores raíz, que dirigen la consulta a los servidores de dominio adecuados.
 4. **Respuesta final**: Una vez encontrada la dirección IP, el servidor DNS la envía al dispositivo, permitiendo la conexión.
 
-## Elementos clave del DNS
+### Elementos clave del DNS
 - **Servidor DNS**: Un sistema que almacena y gestiona la traducción de nombres de dominio a direcciones IP.
 - **Registro A**: Un tipo de registro DNS que asocia un nombre de dominio con una dirección IPv4. Ejemplo:
 
@@ -126,14 +126,14 @@ Durante la batalla espacial sobre Endor, los ingenieros de comunicación rebelde
 En tu respuesta, menciona ejemplos de aplicaciones o situaciones galácticas para cada protocolo: por ejemplo, qué tipo de datos enviarías mediante UDP durante una misión crítica, y cuál vía TCP en comunicaciones rutinarias. (Pista: TCP garantiza la entrega de datos completa y ordenada – ideal para transmitir planes estratégicos; UDP minimiza retrasos – útil para enviar coordenadas de combate en tiempo real, aunque alguna pueda perderse.).
 
 ## Solución
-##  Comparación entre TCP y UDP
+###  Comparación entre TCP y UDP
 
 | Protocolo | Características | Ventajas | Inconvenientes |
 |-----------|---------------|----------|---------------|
 | **TCP (Transmission Control Protocol)** | - Orientado a conexión.<br>- Garantiza entrega completa y ordenada.<br>- Usa control de flujo y congestión. | - Fiabilidad total.<br>- Corrección de errores.<br>- Ideal para datos críticos. | - Mayor latencia.<br>- Consumo de recursos más alto.<br>- No apto para transmisiones en tiempo real. |
 | **UDP (User Datagram Protocol)** | - No orientado a conexión.<br>- No garantiza entrega ni orden.<br>- Sin control de flujo ni congestión. | - Baja latencia.<br>- Menor consumo de recursos.<br>- Ideal para transmisiones en tiempo real. | - Posible pérdida de paquetes.<br>- No garantiza integridad de datos.<br>- No apto para información crítica. |
 
-##  Funcionamiento de TCP
+###  Funcionamiento de TCP
 TCP establece una conexión entre el remitente y el receptor antes de enviar datos. Usa un **handshake de tres vías** para garantizar que ambas partes están listas. Además:
 - **Corrige errores** mediante retransmisión de paquetes perdidos.
 - **Ordena los datos** para que lleguen en la secuencia correcta.
@@ -141,7 +141,7 @@ TCP establece una conexión entre el remitente y el receptor antes de enviar dat
 
  **Ejemplo galáctico:** La transmisión de los **planos de la Estrella de la Muerte** debe ser precisa y completa. **TCP** asegura que cada bit de información llegue sin errores.
 
-##  Funcionamiento de UDP
+###  Funcionamiento de UDP
 UDP no establece conexión previa ni verifica la entrega de paquetes. Es ideal para aplicaciones donde la velocidad es más importante que la precisión:
 - **No retransmite paquetes perdidos**, lo que reduce la latencia.
 - **No ordena los datos**, lo que lo hace más rápido.
@@ -149,9 +149,49 @@ UDP no establece conexión previa ni verifica la entrega de paquetes. Es ideal p
 
  **Ejemplo galáctico:** Durante una batalla, los **streams de vídeo de las cámaras X-Wing** y las **coordenadas de combate** deben enviarse en tiempo real. **UDP** permite que los datos lleguen rápido, aunque algunos paquetes se pierdan.
 
-##  ¿Cuándo usar cada protocolo?
+###  ¿Cuándo usar cada protocolo?
 - **TCP**: Para información crítica que debe llegar completa y en orden (**mensajes estratégicos**, **transferencia de datos**).
 - **UDP**: Para transmisiones en tiempo real donde la velocidad es clave (**comunicaciones de combate**, **streaming de sensores**).
 
-##  Conclusión
+###  Conclusión
 **TCP es como Yoda: sabio, preciso y confiable**, mientras que **UDP es como el Halcón Milenario: veloz, pero con riesgos**. ¡Que la Fuerza de los protocolos te guíe en cada misión! 🚀🔥
+
+---
+# 🔐 Misión 5: Comunicación Segura o Lado Oscuro – Criptografía y Seguridad de la Red
+
+## 📖Situación: 
+La victoria rebelde depende de que sus comunicaciones permanezcan secretas. Se rumorea que espías imperiales (e incluso usuarios del lado oscuro) intentan interceptar los mensajes de la Alianza. La líder Mon Mothma te encomienda diseñar un protocolo de comunicación cifrado para que los mensajes entre bases rebeldes no puedan ser leídos por el Imperio aunque sean capturados.
+
+**Narrativa:** En la sala de guerra de la base rebelde, Mon Mothma se dirige a ti con semblante serio: "Hemos logrado infiltrar agentes en Coruscant, pero comunicarse con ellos es arriesgado. El Imperio intercepta cualquier señal. Aprendiz, necesitamos que nuestras transmisiones sean indescifrables para el enemigo." A tu lado, C-3PO comenta nerviosamente en más de seis millones de formas de comunicación: "Si caemos en manos imperiales, prefiero que apaguen mis circuitos a revelar nuestros mensajes."
+
+**Recuerda que cifrar es esencial:** usar claves secretas para que sólo los rebeldes autorizados puedan leer un mensaje. También piensas en las dos formas en que esto se puede lograr: con clave simétrica (una misma clave secreta compartida) o con claves públicas/privadas (criptografía asimétrica). Es hora de demostrar tu conocimiento en seguridad.
+
+**Pregunta:** Explica brevemente la diferencia entre cifrado simétrico y cifrado asimétrico en el contexto de las comunicaciones de la Alianza. ¿Cómo funciona cada esquema y qué ventajas ofrece?​
+
+Por ejemplo, si Leia y Luke comparten una frase clave secreta para cifrar sus holomensajes, ¿qué tipo de cifrado es ese? En cambio, si la Alianza quiere enviar un mensaje a un nuevo aliado sin haber intercambiado una clave secreta previamente, ¿cómo podría ayudar el cifrado asimétrico (claves pública/privada) en ese caso? Comenta también sobre la importancia de autenticación y no repudio en los mensajes (cómo podemos estar seguros de que el mensaje no ha sido alterado y proviene realmente de quien dice ser). Finalmente, menciona por qué utilizar un protocolo seguro (como SSH en lugar de Telnet) es crucial al administrar remotamente los equipos de la red rebelde.
+
+## Solución
+
+### Cifrado Simétrico vs. Cifrado Asimétrico
+
+| Tipo de Cifrado | Funcionamiento | Ventajas | Inconvenientes |
+|----------------|---------------|----------|---------------|
+| **Simétrico** | Usa una única clave secreta compartida para cifrar y descifrar datos. | - Rápido y eficiente.<br>- Menos consumo de recursos.<br>- Ideal para grandes volúmenes de datos. | - La clave debe compartirse de forma segura.<br>- Si la clave es comprometida, toda la comunicación queda expuesta. |
+| **Asimétrico** | Usa un par de claves: una pública para cifrar y una privada para descifrar. | - No requiere compartir una clave secreta.<br>- Permite autenticación y no repudio.<br>- Más seguro para comunicaciones abiertas. | - Más lento que el cifrado simétrico.<br>- Mayor consumo de recursos.<br>- No ideal para grandes volúmenes de datos. |
+
+###  Ejemplos Galácticos
+- **Cifrado Simétrico:** Si **Leia y Luke** comparten una frase clave secreta para cifrar sus holomensajes, están usando **cifrado simétrico**.
+- **Cifrado Asimétrico:** Si la **Alianza Rebelde** quiere enviar un mensaje a un nuevo aliado sin haber intercambiado una clave secreta previamente, pueden usar **cifrado asimétrico** con claves pública/privada.
+
+### Autenticación y No Repudio
+Para garantizar que un mensaje no ha sido alterado y proviene realmente de quien dice ser:
+- **Autenticación:** Se usa una firma digital para verificar la identidad del remitente.
+- **No repudio:** Evita que el remitente niegue haber enviado el mensaje, asegurando su origen legítimo.
+
+### Importancia de Protocolos Seguros
+El uso de protocolos seguros es crucial para la administración remota de los equipos de la red rebelde:
+- **SSH (Secure Shell)**: Proporciona una conexión cifrada y segura para administrar servidores.
+- **Telnet (inseguro)**: Transmite datos en texto plano, permitiendo que sean interceptados por el Imperio.
+
+### Conclusión
+La criptografía es esencial para proteger las comunicaciones de la Alianza Rebelde. **El cifrado simétrico es rápido y eficiente**, mientras que **el cifrado asimétrico es más seguro para intercambios abiertos**. Además, la autenticación y el uso de protocolos seguros como **SSH** garantizan que los mensajes no sean interceptados ni alterados. ¡Que la Fuerza de la seguridad te acompañe! 🔥🚀
