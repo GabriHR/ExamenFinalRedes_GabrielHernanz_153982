@@ -112,3 +112,46 @@ Cuando un dispositivo intenta acceder a un dominio, sigue estos pasos:
 ## Elementos clave del DNS
 - **Servidor DNS**: Un sistema que almacena y gestiona la traducción de nombres de dominio a direcciones IP.
 - **Registro A**: Un tipo de registro DNS que asocia un nombre de dominio con una dirección IPv4. Ejemplo:
+
+---
+# 🚀 Misión 4: “Es una trampa… de protocolos!” – TCP vs UDP en las transmisiones
+
+## 📖 Situación
+Durante la batalla espacial sobre Endor, los ingenieros de comunicación rebelde notan comportamientos distintos en las transmisiones de datos. Algunas comunicaciones deben ser rápidas aunque ocasionalmente se pierda información (por ejemplo, un stream de vídeo de una cámara X-Wing), mientras que otras deben llegar íntegras y en orden aunque tarden un poco más (por ejemplo, la transferencia de los planos de la Estrella de la Muerte). Estas diferencias corresponden al uso de distintos protocolos de transporte: UDP y TCP. Luke Skywalker, ahora piloteando su X-Wing y ejerciendo de líder en el ataque, te pregunta por qué percibe lagos de datos en unas transmisiones y retrasos en otras.
+
+**Narrativa:** En medio del fragor de la batalla, ves cómo R2-D2 proyecta diagramas de paquetes dentro del X-Wing de Luke. "Algunas de estas tramas van rápidas como el Halcón Milenario, pero otras llegan seguras como Yoda al Consejo," comenta Luke por el comunicador, intentando comprender. Tú, desde la sala de control, le explicas que siente la diferencia entre los dos grandes protocolos de la capa de transporte.
+
+**Pregunta:** Compara los protocolos TCP y UDP y sus características en contexto de la transmisión de datos. ¿Por qué TCP se considera un protocolo confiable y orientado a conexión, y qué implica eso en cuanto a rendimiento? ¿Por qué UDP es no confiable y sin conexión, y en qué casos su rapidez resulta ventajosa?
+
+En tu respuesta, menciona ejemplos de aplicaciones o situaciones galácticas para cada protocolo: por ejemplo, qué tipo de datos enviarías mediante UDP durante una misión crítica, y cuál vía TCP en comunicaciones rutinarias. (Pista: TCP garantiza la entrega de datos completa y ordenada – ideal para transmitir planes estratégicos; UDP minimiza retrasos – útil para enviar coordenadas de combate en tiempo real, aunque alguna pueda perderse.).
+
+## Solución
+##  Comparación entre TCP y UDP
+
+| Protocolo | Características | Ventajas | Inconvenientes |
+|-----------|---------------|----------|---------------|
+| **TCP (Transmission Control Protocol)** | - Orientado a conexión.<br>- Garantiza entrega completa y ordenada.<br>- Usa control de flujo y congestión. | - Fiabilidad total.<br>- Corrección de errores.<br>- Ideal para datos críticos. | - Mayor latencia.<br>- Consumo de recursos más alto.<br>- No apto para transmisiones en tiempo real. |
+| **UDP (User Datagram Protocol)** | - No orientado a conexión.<br>- No garantiza entrega ni orden.<br>- Sin control de flujo ni congestión. | - Baja latencia.<br>- Menor consumo de recursos.<br>- Ideal para transmisiones en tiempo real. | - Posible pérdida de paquetes.<br>- No garantiza integridad de datos.<br>- No apto para información crítica. |
+
+##  Funcionamiento de TCP
+TCP establece una conexión entre el remitente y el receptor antes de enviar datos. Usa un **handshake de tres vías** para garantizar que ambas partes están listas. Además:
+- **Corrige errores** mediante retransmisión de paquetes perdidos.
+- **Ordena los datos** para que lleguen en la secuencia correcta.
+- **Controla el flujo** para evitar sobrecargar al receptor.
+
+ **Ejemplo galáctico:** La transmisión de los **planos de la Estrella de la Muerte** debe ser precisa y completa. **TCP** asegura que cada bit de información llegue sin errores.
+
+##  Funcionamiento de UDP
+UDP no establece conexión previa ni verifica la entrega de paquetes. Es ideal para aplicaciones donde la velocidad es más importante que la precisión:
+- **No retransmite paquetes perdidos**, lo que reduce la latencia.
+- **No ordena los datos**, lo que lo hace más rápido.
+- **No tiene control de congestión**, permitiendo transmisiones fluidas.
+
+ **Ejemplo galáctico:** Durante una batalla, los **streams de vídeo de las cámaras X-Wing** y las **coordenadas de combate** deben enviarse en tiempo real. **UDP** permite que los datos lleguen rápido, aunque algunos paquetes se pierdan.
+
+##  ¿Cuándo usar cada protocolo?
+- **TCP**: Para información crítica que debe llegar completa y en orden (**mensajes estratégicos**, **transferencia de datos**).
+- **UDP**: Para transmisiones en tiempo real donde la velocidad es clave (**comunicaciones de combate**, **streaming de sensores**).
+
+##  Conclusión
+**TCP es como Yoda: sabio, preciso y confiable**, mientras que **UDP es como el Halcón Milenario: veloz, pero con riesgos**. ¡Que la Fuerza de los protocolos te guíe en cada misión! 🚀🔥
