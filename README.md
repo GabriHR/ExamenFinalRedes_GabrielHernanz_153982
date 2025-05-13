@@ -52,7 +52,8 @@ A bordo de la nave de mando Home One, los técnicos rebelde te muestran un panel
 Tú recuerdas tus lecciones sobre cómo en la Red (o la HoloRed) se gestionan las direcciones simbólicas. Un nombre como “echo.base” debe traducirse a una dirección IP para establecer conexión. Ha llegado el momento de explicarlo claramente.
 
 **Pregunta: Explica el funcionamiento básico del sistema DNS** y su importancia en la comunicación en redes. ¿Cómo realiza la red rebelde (o cualquier red TCP/IP) la resolución de nombres de dominio a direcciones IP? Incluye en tu explicación qué es un servidor DNS y un registro (por ejemplo, un registro A), ilustrando con un ejemplo simple (por ejemplo: traducir holonet.rebelion.org a una dirección IP)
-es.wikipedia.org
+
+
 Además, menciona brevemente qué sucede si el servidor DNS no está disponible y cómo eso afectaría a las comunicaciones de la Alianza.
 
 ## Solución:
@@ -83,3 +84,31 @@ Si la red debe expandirse a más planetas:
 
 ### Conclusión
 El enrutamiento estático es ideal para redes pequeñas y controladas, mientras que el dinámico es esencial para redes grandes y cambiantes. ¡Misión cumplida, padawan! Que la Fuerza del enrutamiento te guíe en tu camino. 
+
+---
+
+# 🌌 Misión 3: Los Nombres del Holonet – DNS y Resolución de Nombres
+
+## 📖 Situación
+La flota rebelde ha interceptado transmisiones imperiales que mencionan distintos códigos de planeta y nombres en clave. Para coordinar un contraataque, la Alianza necesita entender cómo los nombres de dominio galácticos se traducen en localizaciones reales. En otras palabras, requieren restablecer un servicio DNS rebelde que asocie nombres de sistemas estelares con direcciones de la red. Sin DNS, comunicarse es tan difícil como encontrar un Ewok en la noche de Endor.
+
+**Narrativa:** A bordo de la nave de mando Home One, los técnicos rebelde te muestran un panel donde parpadea la petición “Unknown host”. El Almirante Ackbar frunce el ceño mientras exclaims: "¡Es una trampa... de nombres! Nuestros sistemas no reconocen las direcciones de destino." Mon Mothma asiente con gravedad: "Debemos reconstruir nuestro directorio de comunicaciones. Aprendiz, ¿cómo funciona este Sistema de Nombres de Dominio nuestro? ¿Por qué es tan importante?".
+
+Tú recuerdas tus lecciones sobre cómo en la Red (o la HoloRed) se gestionan las direcciones simbólicas. Un nombre como “echo.base” debe traducirse a una dirección IP para establecer conexión. Ha llegado el momento de explicarlo claramente.
+
+**Pregunta:** Explica el funcionamiento básico del sistema DNS y su importancia en la comunicación en redes. ¿Cómo realiza la red rebelde (o cualquier red TCP/IP) la resolución de nombres de dominio a direcciones IP? Incluye en tu explicación qué es un servidor DNS y un registro (por ejemplo, un registro A), ilustrando con un ejemplo simple (por ejemplo: traducir holonet.rebelion.org a una dirección IP)​
+
+Además, menciona brevemente qué sucede si el servidor DNS no está disponible y cómo eso afectaría a las comunicaciones de la Alianza.
+## 🔍 ¿Qué es el DNS y por qué es importante?
+El **Sistema de Nombres de Dominio (DNS)** traduce nombres de dominio legibles por humanos en direcciones IP comprensibles por las máquinas. Sin DNS, tendríamos que recordar largas secuencias numéricas en lugar de nombres intuitivos como `holonet.rebelion.org`.
+
+## 🛠️ ¿Cómo funciona la resolución de nombres?
+Cuando un dispositivo intenta acceder a un dominio, sigue estos pasos:
+1. **Consulta al servidor DNS local**: El dispositivo pregunta a su servidor DNS si conoce la dirección IP del dominio.
+2. **Búsqueda en caché**: Si el servidor DNS ya tiene la dirección almacenada, la devuelve inmediatamente.
+3. **Consulta a servidores superiores**: Si no tiene la respuesta, pregunta a los servidores raíz, que dirigen la consulta a los servidores de dominio adecuados.
+4. **Respuesta final**: Una vez encontrada la dirección IP, el servidor DNS la envía al dispositivo, permitiendo la conexión.
+
+## 🔗 Elementos clave del DNS
+- **Servidor DNS**: Un sistema que almacena y gestiona la traducción de nombres de dominio a direcciones IP.
+- **Registro A**: Un tipo de registro DNS que asocia un nombre de dominio con una dirección IPv4. Ejemplo:
